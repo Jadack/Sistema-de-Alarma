@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Recordatorio</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="css/materialize.css">
+    <link rel="stylesheet" href="css/sweetalert2.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="section">
+        <h4 class="center cyan-text">Reloj de Alarma</h4>
+        <div class="container">
+            <div class="row">
+                <div class="col s12">
+                    <div class="center">
+                        <div class="row white-text">
+                            <div class="col s12">
+                                <div class="fecha cyan">
+                                    <p id="diaSemana" class="diaSemana"></p>
+                                    <p id="dia" class="dia"></p>
+                                    <p>de </p>
+                                    <p id="mes" class="mes"></p>
+                                    <p>del </p>
+                                    <p id="year" class="year"></p>
+                                </div>
+                            </div>
+                            <div class="col s12">
+                                <div class="section">
+                                    <div class="reloj cyan">
+                                        <p id="horas" class="horas"></p>
+                                        <p>:</p>
+                                        <p id="minutos" class="minutos"></p>
+                                        <p>:</p>
+                                        <p id="segundos" class="segundos"></p>
+                                        <p id="ampm" class="ampm"></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col l6 s12">
+                    <h4 class="cyan-text center">Establecer Alarma</h4>
+                    <div class="section">
+                        <div class="container">
+                            <form>
+                                <div class="row">
+                                    <div class="col s6">
+                                        <div class="input-field">
+                                            <input id="af" type="text" class="datepicker">
+                                            <label>Fecha</label>
+                                        </div>
+                                    </div>
+                                    <div class="col s6">
+                                        <div class="input-field">
+                                            <input id="ah" type="text" class="timepicker">
+                                            <label>Hora</label>
+                                        </div>
+                                    </div>
+                                    <div class="col s12">
+                                            <div class="input-field">
+                                                <input id="pass" type="password">
+                                                <label>Contraseña</label>
+                                            </div>
+                                        </div>
+                                    <div class="center">
+                                        <a class="waves-effect waves-light btn cyan" onclick="guardarAlarma();"><i class="material-icons right">send</i>Guardar Alarma</a>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="col l6 s12">
+                    <h4 class="cyan-text center">Alarmas</h4>
+                    <div class="section">
+                        <div class="container">
+                            <table class="bordered striped centered">
+                                <thead>
+                                    <tr>
+                                        <td>Count</td>
+                                        <td>Fecha</td>
+                                        <td>Hora</td>
+                                    </tr>
+                                </thead>
+                                <tbody id="tbalarmas">
+                                </tbody>
+                            </table>
+                            <textarea id="alarmas" class="hide">
+                                <td>{Count}</td>
+                                <td id="fechaG">{Fecha}</td>
+                                <td id="horaG">{Hora}</td>
+                                <td class="hide">{Pass}</td>
+                            </textarea>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="js/materialize.js"></script>
+    <script src="js/sweetalert2.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,13 @@
+.fecha p {
+	display: inline-block;
+    line-height: 1em;
+    font-size:1.5em;
+} 
+
+.reloj p {
+    font-size: 4em;
+    display: inline-block;
+}
+.reloj .ampm{
+    font-size: 2rem;
+}
